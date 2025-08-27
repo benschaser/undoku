@@ -40,7 +40,7 @@ class Board:
     def print_row(self, row_index, full_lite, col_lite):
         r = self.grid[row_index]
         if (full_lite):
-            print("│" + LITE + " {}  {}  {}  |  {}  {}  {}  |  {}  {}  {} ".format(
+            print("│" + LITE + " {}  {}  {}  │  {}  {}  {}  │  {}  {}  {} ".format(
                 cell_f(r[0]), 
                 cell_f(r[1]), 
                 cell_f(r[2]), 
@@ -52,7 +52,7 @@ class Board:
                 cell_f(r[8])
             ) + RESET + "│")
         elif (col_lite != -1):
-            formatted_row = "│ {}  {}  {}  |  {}  {}  {}  |  {}  {}  {} │".format(
+            formatted_row = "│ {}  {}  {}  │  {}  {}  {}  │  {}  {}  {} │".format(
                 cell_f(r[0]) if col_lite != 0 else LITE + str(cell_f(r[0])) + RESET,
                 cell_f(r[1]) if col_lite != 1 else LITE + str(cell_f(r[1])) + RESET,
                 cell_f(r[2]) if col_lite != 2 else LITE + str(cell_f(r[2])) + RESET,
