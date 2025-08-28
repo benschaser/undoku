@@ -6,8 +6,8 @@ def main():
     board = Board.load_board(test_file)
     # board.print_cross_lite(3,5)
 
-    solver = Solver
-    solver.load_unsolved(board)
+    solver = Solver()
+    solver.solve(board)
 
 
 

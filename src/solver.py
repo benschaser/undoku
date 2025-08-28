@@ -13,8 +13,11 @@ class Solver:
             for c in range(0, 9, 1):
                 if (self.board.get_cell(c, r) == 0):
                     self.unsolved[(c, r)] = []
+    
+    def collect_possible():
+        pass
 
     def solve(self, board):
         self.board = board
         self.load_unsolved()
-        print(self.unsolved)
+        # print(self.unsolved)
