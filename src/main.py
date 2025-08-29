@@ -1,5 +1,6 @@
 from board import Board
 from solver import Solver
+from solver import clear_terminal
 
 def main():
     test_file = "../test/s1.txt"
@@ -8,6 +9,8 @@ def main():
 
     solver = Solver()
     solver.solve(board)
+    clear_terminal()
+    board.print()
 
 
 

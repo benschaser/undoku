@@ -31,6 +31,15 @@ class Board:
         for row in self.grid:
             col.append(row[x])
         return col
+    
+    def get_box(self, x, y):
+        box = []
+        box_start_x = (x // 3) * 3
+        box_start_y = (y // 3) * 3
+        for r in range(box_start_y, box_start_y + 3, 1):
+            for c in range(box_start_x, box_start_x + 3, 1):
+                box.append(self.grid[r][c])
+        return box
 
     def set_cell(self, x, y, val):
         self.grid[y][x] = val
