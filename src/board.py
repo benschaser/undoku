@@ -14,7 +14,7 @@ class Board:
     def load_board(cls, filepath):
         with open(filepath) as f:
             rows = [
-                [int(ch) if ch.isdigit() else 0 for ch in line.strip()] 
+                [int(ch) if ch.isdigit() else 0 for ch in line.strip() if ch != " "] 
                 for line in f if line.strip()
             ]
         
